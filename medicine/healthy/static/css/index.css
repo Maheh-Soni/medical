@@ -1,0 +1,542 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #fff;
+}
+
+html,body{
+	overflow-x: hidden;
+}
+
+/*============================ Slider ====================*/
+
+/* slider image container */
+
+.slider_container{
+	position: relative;
+	min-height: 99vh;
+	overflow: hidden;
+}
+
+.slider_main1,.slider_main2,.slider_main3,.slider_main4{
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+}
+
+/* slider images for animation */
+.slider_img{
+	width: 120%;
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	animation: zoom-out 3s linear infinite;
+}
+
+.slider_text h1{
+	width: 1000px;
+	padding-left: 7%;
+	padding-top: 7px;
+	position: absolute;
+	top: 180px;
+	left: 100px;
+	animation: textup 12s linear infinite;
+	transform: translateY(100px);
+}
+
+/* slider zoom in and animation effect */
+.slider_main1{
+	animation: slide1 12s linear infinite;
+}
+
+.slider_main2{
+	animation: slide2 12s linear infinite;
+}
+.slider_main3{
+	animation: slide3 12s linear infinite;
+}
+.slider_main4{
+	animation: slide4 12s linear infinite;
+}
+
+
+@keyframes slide1 {
+	0%{
+		visibility: visible;
+	}
+	25%{
+		visibility: hidden;
+	}
+	50%{
+		visibility: hidden;
+	}
+	75%{
+		visibility: hidden;
+	}
+	100%{
+		visibility: visible;
+	}
+}
+
+@keyframes slide2 {
+	0%{
+		visibility: hidden;
+	}
+	25%{
+		visibility: hidden;
+	}
+	50%{
+		visibility: visible;
+	}
+	75%{
+		visibility: hidden;
+	}
+	100%{
+		visibility: hidden;
+	}
+}
+
+@keyframes slide3 {
+	0%{
+		visibility: hidden;
+	}
+	25%{
+		visibility: hidden;
+	}
+	50%{
+		visibility: hidden;
+	}
+	75%{
+		visibility: visible;
+	}
+	100%{
+		visibility: hidden;
+	}
+}
+
+@keyframes slide4 {
+	0%{
+		visibility: hidden;
+	}
+	25%{
+		visibility: hidden;
+	}
+	50%{
+		visibility: hidden;
+	}
+	75%{
+		visibility: hidden;
+	}
+	100%{
+		visibility: visible;
+	}
+}
+
+/* ========== protected =========== */
+
+
+.parties{
+	display: flex;
+}
+
+.parties1{
+	width: 50%;
+}
+
+.parties1 img{
+	width: 100%;
+	padding: 5rem;
+}
+
+.parties2{
+	width: 50%;
+	text-align: center;
+	padding-top: 6%;
+}
+
+.parties2 h1{
+	font-size: 40px;
+	padding-right: 12%;
+	font-family: "sans-serif;";
+	color: #4d4d4d;
+	text-align: justify;
+}
+
+.parties2 p{
+	font-size: 14px;
+	font-family: sans-serif;
+	color: #4d4d4d;
+	margin-top: 1%;
+	padding-right: 10%;
+	text-align: justify;
+}
+
+
+.tick{
+	margin-top: 4%;
+	margin-right: 10%;
+	font-size: 20px;
+}
+
+.dr_img{
+	margin-top: -1%;
+}
+
+.dr_img img{
+	margin-right: 30%;
+}
+
+
+/* ============ Sales =============== */
+
+.sales_container{
+	display: flex;
+	margin-left: 4%;
+	margin-top: 5%;
+}
+
+.sales_container img{
+	width: 27%;
+	margin-left: 4%;
+}
+
+/* ============== Products =============== */
+
+.best_Seller
+{
+	text-align: center;
+	margin-top: 8%;
+}
+
+.best_Seller h1{
+	font-size:  60px;
+	font-weight: bold;
+}
+
+.wrapper{
+	display: flex;
+	width: 80%;
+	padding-top: 5rem;
+	justify-content: space-around;
+	margin-left: 8rem;
+}
+
+.medi_items{
+	width: 100%;
+	height: 350px;
+	margin-left: rem;
+	padding: 5rem;
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	transition: 0.4s ease-out;
+}
+	.medi_items:hover{
+		transform: translateY(6px);
+	}
+	.medi_items:hover:before{
+		opacity:1;
+	}
+
+
+.medi_items:hover .info{
+	opacity: 1;
+	transform: translateY(0px);
+}
+.medi_items:before{
+	content: "";
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;;
+	height: 100%;
+	z-index: 2;
+	transition: 0.5s;
+	opacity: 0;
+}
+
+.medi_items img{
+	width: 80%;
+	height: 100%; 
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.medi_items .info{
+	position: relative;
+	z-index: 1;
+	color: black;
+	opacity: 0;
+	transform: translateY(0px);
+	transition: 0.5s;
+}
+
+.medi_items .info table
+{
+	background-color: #fff;
+	margin-left: -25%;
+	border: 2px solid #4d4d4d;
+}
+
+.medi_items .info table tr td i{
+	margin-left: 20%;
+}
+
+/* ================== Additional Goods ===================== */
+
+
+
+
+/* ============== About Page Doctor ========== */
+
+.custom-card {
+    margin: 40px;
+    padding: 15px;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+  }
+
+  .card-footer {
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #e9ecef;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .focused-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+    margin: 0;
+    transition: color 0.3s ease;
+  }
+
+  /* Add a hover effect for the card footer */
+  .card-footer:hover {
+    background-color: #e9ecef;
+	cursor: pointer;
+  }
+
+  /* Add a hover effect for the text color */
+  .card-footer:hover .focused-text {
+    color: #0056b3;
+  }
+
+
+  /* =========== Client Review Section ========== */
+
+  .client-feedback-container {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  .client-feedback-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+  }
+
+  .client-feedback-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .client-feedback-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .client-feedback-content {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+  .client-feedback-author {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .client-feedback-image {
+    max-width: 100px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+  }
+
+/* =========== Doctor page DOctor cards ============= */
+
+.banner
+{
+	width: 100%;
+	position: relative;
+}
+
+.banner_name{
+	position: absolute;
+	top: 40%;
+	left: 10%;
+}
+
+.banner_name a{
+	text-decoration: none;
+	font-size: 22px;
+}
+
+.banner_name a:hover{
+	color: red;
+}
+
+.doctor_bannner
+{
+	width: 100%;
+}
+
+.main_doctor
+{
+	display: flex;
+	margin-left: 40px;
+}
+
+.Doctor_img
+{
+	width: 80%;
+}
+
+.Doctor_containerji
+{
+	margin: 50px;
+	width: 80%;
+    padding: 30px;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.Doctor_nameji
+{
+	margin-top: 15%;
+}
+
+/* =============== Contact Page ===============  */
+
+.contact_banner_img
+{
+	width: 100%;
+	height: 67vh;
+}
+
+/* =============== Contact Us Contact ================= */
+
+
+/* Custom CSS for Contact Section */
+.contact-section {
+	background-color: #f8f9fa;
+	padding: 80px 0;
+	text-align: center;
+  }
+  
+  .section-title {
+	font-size: 32px;
+	color: #333;
+	margin-bottom: 30px;
+  }
+  
+  .contact-info {
+	background-color: #ffffff;
+	padding: 40px;
+	border-radius: 15px;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+	margin: 30px 0;
+	transition: transform 0.3s ease-in-out;
+  }
+  
+  .contact-info:hover {
+	transform: translateY(-10px);
+  }
+  
+
+  .info-label {
+	font-size: 24px;
+	color: #555;
+	margin-bottom: 15px;
+  }
+  
+  .info-value {
+	font-size: 22px;
+	color: #333;
+	font-weight: bold;
+  }
+  
+
+.patitent_form
+{
+	width: 75%;
+	margin: auto;
+	padding: 3%;
+}
+
+.form_head h5
+{
+	font-size: 23px;
+}
+
+.patitent_reviews
+{
+	margin-top: 4%;
+}
+
+.patitent_reviews input
+{
+	width: 45%;
+	height: 50px;
+	padding: 1%;
+}
+
+.patitent_reviews textarea
+{
+	width: 95.5%;
+	padding: 1%;
+}
+
+.patitent_reviews input:hover
+ {
+	border: 2px solid rgb(74, 201, 74);
+ } 
+
+ .patitent_reviews textarea:hover
+ {
+	border: 2px solid rgb(74, 201, 74);
+ }
+
+.patitent_submit button
+{
+	margin-top: 4%;
+	width: 200px;
+	padding: 2%;
+	border: none;
+	color: white;
+	background-color: rgb(74, 201, 74);
+	font-size: 20px;
+	font-weight: bold;
+	font-family: sans-serif;
+}

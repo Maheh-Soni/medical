@@ -1,0 +1,109 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block data %}
+
+<div class="banner">
+    <div class="banner_name">
+        <h3 style="font-size: 50px;">Shop</h3><br>
+        <i class="fas fa-home me-3" style="margin-left: 10px;"></i><a href="{% url 'home' %}">Home</a>&nbsp;&nbsp;><a href="{% url 'shop' %}" style="margin-left: 5px;">Shop</a>
+    </div>
+    <img src="{% static 'images/doctor_page.jpg' %}" alt="" class="doctor_bannner">
+</div>
+
+<style>
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+  }
+  .card img {
+    max-width: 100%;
+    height: auto;
+  }
+  .product-name {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  .price {
+    font-size: 24px;
+    color: #007bff;
+    margin: 10px 0;
+  }
+  .rating {
+    color: #ffc107;
+    font-size: 16px;
+  }
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  .btn-cart {
+    background-color: #28a745;
+    color: white;
+  }
+  .btn-buy {
+    background-color: #007bff;
+    color: white;
+  }
+</style>
+
+<div class="product_contain" style="display: flex;">
+    {% for i in product1 %}
+      <div class="card" style="margin-left: 9%;">
+        <img src="{% static i.image %}" alt="Medical Product">
+        <div class="product-name">{{i.name}}</div>
+        <div class="price">{{i.price}}</div>
+        <div class="rating">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+        <div class="buttons">
+            <button class="btn btn-buy">Buy Now</button>
+          <button class="btn btn-cart">Add to Cart</button>
+        </div>
+      </div>
+    {% endfor %}
+</div>
+
+<div class="product_contain" style="display: flex;">
+    {% for i in product2 %}
+      <div class="card" style="margin-left: 9%;">
+        <img src="{% static i.image %}" alt="Medical Product">
+        <div class="product-name">{{i.name}}</div>
+        <div class="price">{{i.price}}</div>
+        <div class="rating">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+        <div class="buttons">
+            <button class="btn btn-buy">Buy Now</button>
+          <button class="btn btn-cart">Add to Cart</button>
+        </div>
+      </div>
+    {% endfor %}
+</div>
+
+<div class="product_contain" style="display: flex;">
+    {% for i in product3 %}
+      <div class="card" style="margin-left: 9%;">
+        <img src="{% static i.image %}" alt="Medical Product">
+        <div class="product-name">{{i.name}}</div>
+        <div class="price">{{i.price}}</div>
+        <div class="rating">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+        <div class="buttons">
+            <button class="btn btn-buy">Buy Now</button>
+          <button class="btn btn-cart">Add to Cart</button>
+        </div>
+      </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

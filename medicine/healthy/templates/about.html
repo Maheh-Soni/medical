@@ -1,0 +1,161 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block data %}
+<section class="parties">
+    <div class="parties1" id="chief-1">
+      <img src="{% static 'images/protected.png' %}" alt="" />
+    </div>
+    <div class="parties2" id="chef1-about">
+      <h1 style="margin-top: -5%;">Your Faithful Partners Medical Goods</h1>
+      <br>
+      <p style="text-align: justify;">
+        Houzez allow you to design unlimited panels and real estate custom forms to capture leads and keep record of all information.
+      </p>
+      <div class="tick_content">
+      <div  class="tick">
+        <i class="fa-solid fa-square-check fa-lg" style="color: #3dd66b;"></i>
+        <span style="margin-right: 27%;">Better security for patient privacy and information.</span>
+      </div>
+      <div class="tick">
+        <i class="fa-solid fa-square-check fa-lg" style="color: #3dd66b;"></i>
+        <span style="margin-right:54%;">More products at lower prices.</span>
+      </div>
+      <div class="tick">
+        <i class="fa-solid fa-square-check fa-lg" style="color: #3dd66b;"></i>
+        <span style="margin-right: 20%;">connect customers with the power of eCommerce at all.</span>
+      </div>
+      <hr style="margin-right: 10%;margin-top: 5%;">
+      <div class="dr_img">
+        <img src="{% static 'images/dr.png' %}" width="60%" alt="">
+      </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ============= Doctor Card =========== -->
+  <div class="row row-cols-1 row-cols-md-2 g-sm-0 mt-5">
+    <!-- Doctor 1 -->
+    <div class="col-md-4">
+      <div class="custom-card">
+        <img src="{% static 'images/doctor3.jpg' %}" class="card-img-top"
+          alt="Doctor Image" />
+        <div class="card-body">
+          <h5 class="card-title">Dr. Sarah Smith</h5>
+          <p class="card-text"><strong>Cardiologist</strong></p>
+        </div>
+        <div class="card-footer">
+          <p class="focused-text">Available for Your Health Journey 🌟</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Doctor 2 -->
+    <div class="col-md-4">
+      <div class="custom-card">
+        <img src="{% static 'images/doctor2.jpg' %}" class="card-img-top"
+          alt="Doctor Image" />
+        <div class="card-body">
+          <h5 class="card-title">Dr. James Johnson</h5>
+          <p class="card-text"><strong>Orthopedic Surgeon</strong></p>
+        </div>
+        <div class="card-footer">
+          <p class="focused-text">Ready to Assist Your Health Needs 💼</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Doctor 3 -->
+    <div class="col-md-4">
+      <div class="custom-card">
+        <img src="{% static 'images/doctor5.jpg' %}" style="width: 87%;" class="card-img-top"
+          alt="Doctor Image" />
+        <div class="card-body">
+          <h5 class="card-title">Dr. Emily Williams</h5>
+          <p class="card-text"><strong>Pediatrician</strong></p>
+        </div>
+        <div class="card-footer">
+          <p class="focused-text">Focused on Your Wellness Journey 🌿</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- ========== Client Review =========== -->
+
+<section class="client-feedback-container mt-5">
+  <div class="container">
+    <h2 class="client-feedback-title">What Our Clients Say</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="client-feedback-card">
+          <img src="{% static 'images/patient3.jpg' %}" alt="Client Image" class="client-feedback-image">
+          <p class="client-feedback-content">
+            "Amazing experience with Dr. Smith! She really cares about her patients and provides top-notch medical care."
+          </p>
+          <p class="client-feedback-author">John Doe</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="client-feedback-card">
+          <img src="{% static 'images/patient2.jpg' %}" alt="Client Image" class="client-feedback-image">
+          <p class="client-feedback-content">
+            "I had a successful surgery with Dr. Johnson. His expertise and professionalism are commendable."
+          </p>
+          <p class="client-feedback-author">Jane Smith</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="client-feedback-card">
+          <img src="{% static 'images/patient1.jpg' %}" alt="Client Image" class="client-feedback-image">
+          <p class="client-feedback-content">
+            "Dr. Williams is fantastic with kids. My children feel comfortable and safe during their visits."
+          </p>
+          <p class="client-feedback-author">Michael Brown</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================ Core Features =========== -->
+
+<section class="core-features mt-5">
+  <div class="container text-center">
+    <h2 class="section-title" style="font-size: 40px;">Core Features</h2>
+    <div class="row" style="margin-top: 8%;">
+      <div class="col-md-3">
+        <div class="feature-item">
+          <i class="fas fa-truck feature-icon"></i>
+          <h3 class="feature-title">Free Delivery</h3>
+          <p class="feature-description">Fast and free delivery for all orders</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="feature-item">
+          <i class="fas fa-money-bill-wave feature-icon"></i>
+          <h3 class="feature-title">100% Cash Back</h3>
+          <p class="feature-description">Get 100% cash back on returns</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="feature-item">
+          <i class="fas fa-star feature-icon"></i>
+          <h3 class="feature-title">Quality Products</h3>
+          <p class="feature-description">We ensure the highest quality for our products</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="feature-item">
+          <i class="fas fa-headset feature-icon"></i>
+          <h3 class="feature-title">24/7 Support</h3>
+          <p class="feature-description">Dedicated customer support available 24/7</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+{% endblock %}

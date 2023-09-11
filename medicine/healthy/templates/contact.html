@@ -1,0 +1,72 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block data %}
+
+<!-- ============= Banner ============ -->
+
+<div class="banner">
+    <div class="banner_name" style="padding: 10px;">
+    <h3 style="font-size: 50px; color: black;">Contact Us</h3><br>
+    <i class="fas fa-home me-3" style="margin-left: 10px;"></i><a href="{% url 'home' %}" style="color: black;">Home</a>&nbsp;&nbsp;><a href="{% url 'contact' %}" style="margin-left: 5px;color: black;">Contact Us</a>
+    </div>
+    <img src="{% static 'images/contact.jpg' %}" alt="" class="contact_banner_img">
+</div>
+
+<!-- ============== Contact Us ================ -->
+
+<div class="contact-section mt-5">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="contact-info">
+            <i class="fas fa-envelope"></i>
+            <h3 class="info-label">Email</h3>
+            <p class="info-value">example@example.com</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-info">
+            <i class="fas fa-phone"></i>
+            <h3 class="info-label">Phone</h3>
+            <p class="info-value">+123 456 7890</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-info">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3 class="info-label">Address</h3>
+            <p class="info-value">123 Street, City, Country</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<div class="patitent_form">
+  <div class="form_head">
+    <h5>| Share Your Review</h1>
+  </div>
+  <form action="">
+    <div class="patitent_reviews">
+      <input type="text" name="" placeholder="Enter Your Name  👨" id="">
+      <input type="text" name="" placeholder="Enter Your Email Add  ✉️" id="" style="margin-left: 5%;">
+    </div>                                                                
+    <div class="patitent_reviews">
+      <input type="text" name="" placeholder="Enter Contact no.  📞" id="">
+      <input type="text" name="" placeholder="Enter Your Address      🏡" id="" style="margin-left: 5%;">
+    </div>
+    <div class="patitent_reviews">
+      <textarea name="" id="" cols="30" rows="10" placeholder="Enter Message"></textarea>
+    </div>
+    <div class="patitent_submit">
+      <button>Submit</button>
+    </div>
+  </form>
+</div>  
+  
+<div class="google-map" style="height: 80vh;">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9334.271551495209!2d-73.97198251485975!3d40.668170674982946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25b0456b5a2e7%3A0x68bdf865dda0b669!2sBrooklyn%20Botanic%20Garden%20Shop!5e0!3m2!1sen!2sbd!4v1590597267201!5m2!1sen!2sbd" width="100%" height="100%" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+
+{% endblock %}

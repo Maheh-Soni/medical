@@ -1,0 +1,59 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block data %}
+
+<div class="banner">
+    <div class="banner_name">
+        <h3 style="font-size: 50px;">Our Team</h3><br>
+        <i class="fas fa-home me-3" style="margin-left: 10px;"></i><a href="{% url 'home' %}">Home</a>&nbsp;&nbsp;><a href="{% url 'doctor' %}" style="margin-left: 5px;">Our Team</a>
+    </div>
+    <img src="{% static 'images/doctor_page.jpg' %}" alt="" class="doctor_bannner">
+</div>
+
+<div class="main_doctor">
+{% for i in doctor %}
+<div class="Doctor_containerji">
+    <div class="Doctor_cardji">
+        <div class="Doctor_img_containerji">
+            <img src="{% static i.image %}" alt="{{i.name}}" class="Doctor_img">
+        </div>
+        <div class="Doctor_nameji">
+            <h3>{{i.name}}</h3>
+            <p>{{i.expert}}</p>
+        </div>
+        <div class="Doctor_thinkji">
+            <p>{{i.thought}}</p>
+        </div>
+    </div>
+</div>
+{% endfor %}
+</div>
+
+<div class="main_doctor">
+    {% for i in doctor2 %}
+    <div class="Doctor_containerji">
+        <div class="Doctor_cardji">
+            <div class="Doctor_img_containerji">
+                <img src="{% static i.image %}" alt="{{i.name}}" class="Doctor_img">
+            </div>
+            <div class="Doctor_nameji">
+                <h3>{{i.name}}</h3>
+                <p>{{i.expert}}</p>
+            </div>
+            <div class="Doctor_thinkji">
+                <p>{{i.thought}}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+
+
+
+
+
+
+
+    
+
+{% endblock %}
